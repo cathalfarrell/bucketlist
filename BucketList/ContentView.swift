@@ -12,6 +12,8 @@ import SwiftUI
 struct ContentView: View {
 
     @State private var isUnlocked = false
+    @State private var authenticationFailed = false
+    @State private var errorString = ""
 
     var body: some View {
             ZStack {
@@ -31,7 +33,14 @@ struct ContentView: View {
                     .clipShape(Capsule())
                 }
             }
+        .alert(isPresented: $authenticationFailed) {
+            Alert(title: Text("Authentication Required"), message: Text(errorString), dismissButton: .default(Text("OK")))
+        }
     }
+
+    /* Challenge 3 -
+     Our app silently fails when errors occur during biometric authentication. Add code to show those errors in an alert, but be careful: you can only add one alert() modifier to each view.
+     */
 
     func authenticate() {
         let context = LAContext()
@@ -49,11 +58,15 @@ struct ContentView: View {
                         self.isUnlocked = true
                     } else {
                         // error
+                        self.errorString = "Failed to authenticate. Please try again."
+                        self.authenticationFailed = true
                     }
                 }
             }
         } else {
             // no biometrics
+            self.errorString = "No biometrics found on device. This app requires biometric authetication for security purposes."
+            self.authenticationFailed = true
         }
     }
 }
