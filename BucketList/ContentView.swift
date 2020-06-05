@@ -19,7 +19,7 @@ struct ContentView: View {
     @State private var showingPlaceDetails = false
     @State private var showingEditScreen = false
 
-    @State private var isUnlocked = false
+    @State private var isUnlocked = true
 
     var body: some View {
 
@@ -46,13 +46,18 @@ struct ContentView: View {
                                 self.showingEditScreen = true
                             }) {
                                 Image(systemName: "plus")
+                                .padding()// adds padding before adding background
+                                .background(Color.black.opacity(0.75))
+                                .foregroundColor(.white)
+                                .font(.title)
+                                .clipShape(Circle())
+                                /* Challenge 1
+                                 Our + button is rather hard to tap. Try moving all its modifiers to the image inside the button – what difference does it make, and can you think why?
+                                 */
                             }
-                            .padding()// adds padding before adding background
-                            .background(Color.black.opacity(0.75))
-                            .foregroundColor(.white)
-                            .font(.title)
-                            .clipShape(Circle())
-                            .padding([.trailing, .bottom]) // adds padding to right-hand-side
+                            .padding(.trailing, 8)
+                            .padding(.bottom, 30)
+
                         }
                     }
                 }
