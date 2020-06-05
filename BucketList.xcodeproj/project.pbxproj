@@ -18,6 +18,7 @@
 		8C878A6C2486A34000028C47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C878A6B2486A34000028C47 /* Assets.xcassets */; };
 		8C878A6F2486A34000028C47 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C878A6E2486A34000028C47 /* Preview Assets.xcassets */; };
 		8C878A722486A34000028C47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C878A702486A34000028C47 /* LaunchScreen.storyboard */; };
+		8CDEB099248A63EB004C0921 /* MapScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDEB098248A63EB004C0921 /* MapScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		8C878A6E2486A34000028C47 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8C878A712486A34000028C47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C878A732486A34000028C47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CDEB098248A63EB004C0921 /* MapScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				8C878A652486A33F00028C47 /* AppDelegate.swift */,
 				8C878A672486A33F00028C47 /* SceneDelegate.swift */,
 				8C878A692486A33F00028C47 /* ContentView.swift */,
+				8CDEB098248A63EB004C0921 /* MapScreenView.swift */,
 				8C878A6B2486A34000028C47 /* Assets.xcassets */,
 				8C878A702486A34000028C47 /* LaunchScreen.storyboard */,
 				8C878A732486A34000028C47 /* Info.plist */,
@@ -167,6 +170,7 @@
 				8C878A682486A33F00028C47 /* SceneDelegate.swift in Sources */,
 				8C7DFD9B2489211C004D3E15 /* Result.swift in Sources */,
 				8C7DFD9724891CD2004D3E15 /* MKPointAnnotation-ObservableObject.swift in Sources */,
+				8CDEB099248A63EB004C0921 /* MapScreenView.swift in Sources */,
 				8C7DFD9D248941B9004D3E15 /* MKPointAnnotation-Codable.swift in Sources */,
 				8C878A6A2486A33F00028C47 /* ContentView.swift in Sources */,
 			);
